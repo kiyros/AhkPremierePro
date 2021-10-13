@@ -27,21 +27,22 @@ return
 
 ;click functions
 !^s:: ; Click and hold scale
-    ImageSearch, x, y, 0, 0, A_ScreenWidth, A_ScreenHeight, AdobePPScale.png
+    ImageSearch, x, y, 0, 0, A_ScreenWidth, A_ScreenHeight, scale.png
     MouseMove, x+220, y
+    ;Msgbox scale function
     Click, Down
 
     return
 
 !^x:: ; click and hold poition x
-    ImageSearch, x, y, 0, 0, A_ScreenWidth, A_ScreenHeight, Adobe_Premiere_ProPosition.png
+    ImageSearch, x, y, 0, 0, A_ScreenWidth, A_ScreenHeight, position.png
     MouseMove, x+220, y
     Click, Down
 
     return
 
 !^y:: ; click and hold poition y
-    ImageSearch, x, y, 0, 0, A_ScreenWidth, A_ScreenHeight, Adobe_Premiere_ProPosition.png
+    ImageSearch, x, y, 0, 0, A_ScreenWidth, A_ScreenHeight, position.png
     MouseMove, x+280, y
     Click, Down
 
