@@ -26,25 +26,58 @@ return
 
 
 ;click functions
-!^s:: ; Click and hold scale
+^!s:: ; Click and hold scale
+    MouseGetPos, xpos, ypos
+
     ImageSearch, x, y, 0, 0, A_ScreenWidth, A_ScreenHeight, scale.png
     MouseMove, x+220, y
-    ;Msgbox scale function
     Click, Down
+
+    {
+        Sleep, 100
+    }
+    Click, Up
+    Sleep, 100
+
+    ; return to original position before pressing this macro
+    MouseMove, xpos, ypos
 
     return
 
-!^x:: ; click and hold poition x
+^!x:: ; click and hold poition x
+    MouseGetPos, xpos, ypos
+
     ImageSearch, x, y, 0, 0, A_ScreenWidth, A_ScreenHeight, position.png
     MouseMove, x+220, y
     Click, Down
 
+    while GetKeyState("x", "P")
+    {
+        Sleep, 100
+    }
+    Click, Up
+    Sleep, 100
+
+    ; return to original position before pressing this macro
+    MouseMove, xpos, ypos
+
     return
 
-!^y:: ; click and hold poition y
+^!y:: ; click and hold poition y
+    MouseGetPos, xpos, ypos
+
     ImageSearch, x, y, 0, 0, A_ScreenWidth, A_ScreenHeight, position.png
     MouseMove, x+280, y
     Click, Down
+    while GetKeyState("y", "P")
+    {
+        Sleep, 100
+    }
+    Click, Up
+    Sleep, 100
+
+    ; return to original position before pressing this macro
+    MouseMove, xpos, ypos
 
     return
 
