@@ -33,6 +33,7 @@ return
     MouseMove, x+220, y
     Click, Down
 
+    while GetKeyState("s", "P")
     {
         Sleep, 100
     }
